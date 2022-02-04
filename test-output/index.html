@@ -24,22 +24,22 @@
   <body>
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
-      <button class="button" id="button">Switch Retro Theme</button> <!-- button -->
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
       <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
         <span>All suites</span>
-        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
-          <img class="collapse-all-icon" src="collapseall.gif">
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
           </img> <!-- collapse-all-icon -->
         </a> <!-- collapse-all-link -->
       </div> <!-- navigator-suite-header -->
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" class="navigator-link" panel-name="suite-Default_suite">
+            <a href="#" panel-name="suite-Default_suite" class="navigator-link">
               <span class="suite-name border-passed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
@@ -50,37 +50,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
+                  <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
                     <span>testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="testlist-Default_suite">
+                  <a href="#" panel-name="testlist-Default_suite" class="navigator-link ">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="group-Default_suite">
+                  <a href="#" panel-name="group-Default_suite" class="navigator-link ">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="times-Default_suite">
+                  <a href="#" panel-name="times-Default_suite" class="navigator-link ">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="reporter-Default_suite">
+                  <a href="#" panel-name="reporter-Default_suite" class="navigator-link ">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="ignored-methods-Default_suite">
+                  <a href="#" panel-name="ignored-methods-Default_suite" class="navigator-link ">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="chronological-Default_suite">
+                  <a href="#" panel-name="chronological-Default_suite" class="navigator-link ">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,8 +103,18 @@
                     </span>
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="TC002_POST_Request" hash-for-method="RegistrationSuccessful">RegistrationSuccessful</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="DataDrivenTesting.DataDrivenAddUser_DataProvider" class="method navigator-link" hash-for-method="PostNewEmployee(Abhay, Automation Tester)">PostNewEmployee(Abhay, Automation Tester)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="DataDrivenTesting.DataDrivenAddUser_DataProvider" class="method navigator-link" hash-for-method="PostNewEmployee(Ravinder, Developer)">PostNewEmployee(Ravinder, Developer)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="DataDrivenTesting.DataDrivenAddUser_DataProvider" class="method navigator-link" hash-for-method="PostNewEmployee(dilip, Manual Tester)">PostNewEmployee(dilip, Manual Tester)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -122,14 +132,31 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">TC002_POST_Request</span>
+              <span class="class-name">DataDrivenTesting.DataDrivenAddUser_DataProvider</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="RegistrationSuccessful">
-                  </a> <!-- RegistrationSuccessful -->
-                  <span class="method-name">RegistrationSuccessful</span>
+                  <a name="PostNewEmployee(Abhay, Automation Tester)">
+                  </a> <!-- PostNewEmployee(Abhay, Automation Tester) -->
+                  <span class="method-name">PostNewEmployee</span>
+                  <span class="parameters">(Abhay, Automation Tester)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="PostNewEmployee(Ravinder, Developer)">
+                  </a> <!-- PostNewEmployee(Ravinder, Developer) -->
+                  <span class="method-name">PostNewEmployee</span>
+                  <span class="parameters">(Ravinder, Developer)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="PostNewEmployee(dilip, Manual Tester)">
+                  </a> <!-- PostNewEmployee(dilip, Manual Tester) -->
+                  <span class="method-name">PostNewEmployee</span>
+                  <span class="parameters">(dilip, Manual Tester)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -137,16 +164,16 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/tmp/testng-eclipse-1229530798/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/49/05hyv0297r9ct978bjllq40w0000gn/T/testng-eclipse--1746472217/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
+&lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;TC002_POST_Request&quot;/&gt;
+      &lt;class name=&quot;DataDrivenTesting.DataDrivenAddUser_DataProvider&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -186,16 +213,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'RegistrationSuccessful')
-data.setCell(0, 2, 'TC002_POST_Request')
-data.setCell(0, 3, 3342);
+data.setCell(0, 1, 'PostNewEmployee')
+data.setCell(0, 2, 'DataDrivenTesting.DataDrivenAddUser_DataProvider')
+data.setCell(0, 3, 3296);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'PostNewEmployee')
+data.setCell(1, 2, 'DataDrivenTesting.DataDrivenAddUser_DataProvider')
+data.setCell(1, 3, 936);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'PostNewEmployee')
+data.setCell(2, 2, 'DataDrivenTesting.DataDrivenAddUser_DataProvider')
+data.setCell(2, 3, 489);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 seconds</span>
+              <span class="suite-total-time">Total running time: 4 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -221,10 +256,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">TC002_POST_Request</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">DataDrivenTesting.DataDrivenAddUser_DataProvider</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">RegistrationSuccessful</span>
+                <span class="method-name">PostNewEmployee(Abhay, Automation Tester)</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">PostNewEmployee(dilip, Manual Tester)</span>
+                <span class="method-start">3309 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">PostNewEmployee(Ravinder, Developer)</span>
+                <span class="method-start">4248 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
