@@ -1,5 +1,10 @@
 package DataDrivenTesting;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.json.simple.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
@@ -13,7 +18,7 @@ import io.restassured.specification.RequestSpecification;
 public class DataDrivenAddUser_DataProvider {
 	
 	@Test(dataProvider="empdataprovider")
-	void PostNewEmployee(String ename , String ejob)
+	void PostNewEmployee(String Ename , String Ejob)
 	{
 		//Specify base URI
 		RestAssured.baseURI="https://reqres.in/api";
@@ -24,8 +29,8 @@ public class DataDrivenAddUser_DataProvider {
 		//We create the data which we can send along with the post request.
 		JSONObject requestParams = new JSONObject ();
 		
-		requestParams.put("name", ename);
-		requestParams.put("job", ejob);
+		requestParams.put("name", Ename);
+		requestParams.put("job", Ejob);
 		//requestParams.put("age", "35");
 		
 		//add a header stating the request body in Json
@@ -42,18 +47,42 @@ public class DataDrivenAddUser_DataProvider {
 		 System.out.println("Response Boday :"+ ResponseBody);
 		 
 		
-		 Assert.assertEquals(ResponseBody.contains(ename),true);
-		 Assert.assertEquals(ResponseBody.contains(ejob),true);
+		 Assert.assertEquals(ResponseBody.contains(Ename),true);
+		 Assert.assertEquals(ResponseBody.contains(Ejob),true);
 		 
 		 int StatusCode = response.getStatusCode();
 		 Assert.assertEquals(StatusCode, 201);
 	}
 
 	@DataProvider(name="empdataprovider")
-	String[][] getEmpData() 
+	String[][] getEmpData() throws IOException 
 	
 	{
-		String empdata [][]= {{ "Abhay" , "Automation Tester"},{"dilip" , "Manual Tester"}, {"Ravinder","Developer"}};
+		//Read data from excel
+		String Path =System.getProperty("user.dir")+"/src/test/java/DataDrivenTesting/empdata.xls";
+		
+		
+
+		//String Path ="/Users/activemac03/git/RestAssuredAPITesting/src/test/java/DataDrivenTesting/empdata.xlsx";
+		int rownum = XLUtility.getRowCount(Path, "Sheet1");
+		
+		int colcount=XLUtility.getCellCount(Path, "Sheet1", 1);
+		
+		
+		String empdata [][] = new String[rownum][colcount];
+		
+		for(int i=1 ; i<=rownum ; i++){
+			for(int j=0; j<colcount ; j++) {
+				
+				empdata [i-1][j] =XLUtility.getCellData(Path, "Sheet1", i, j);
+			}
+			
+		}
+		
+		
+		
+		
+		//String empdata [][]= {{ "Abhay" , "Automation Tester"},{"dilip" , "Manual Tester"},{"Ravinder","Developer"}};
 		return (empdata);
 		
 	}
